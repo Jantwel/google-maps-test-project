@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Google Maps App</h1>
+  <google-map 
+    [center]='center' 
+    [zoom]='zoom' 
+    (mapClick)='addLocation($event)' 
+    [markers]='markers' 
+    [heatmapData]='heatmapData'>
+  </google-map>
+  <div class="row">
+    <div class="col-sm-6">
+      <button (click)="getMyTime()" type="button" class="btn btn-primary">Get My Time</button>
+      <p *ngIf="isGettingMyTime" class="lead">My Locale Time: {{myLocalTime}}</p>
+    </div>
+    <div class="col-sm-6">
+      <div *ngIf="markersLocalTime.length">
+        <button (click)="removeItems()" type="button" class="btn btn-danger">Remove Marker</button>
+        <ol >
+          <li *ngFor="#item of markersLocalTime">{{item.timeZoneId}}: {{item.localTime}}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
