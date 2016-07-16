@@ -9,4 +9,4 @@ npm start
 
 ```
 
-Open it in your browser [http://localhost:9000/app](http://localhost:9000/app).
+Open it in your browser [http://localhost:3000/](http://localhost:3000/).
